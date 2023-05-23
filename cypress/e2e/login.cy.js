@@ -25,7 +25,7 @@ describe('Funcionalidade: Login', () => {
             .should('contain', 'Endereço de e-mail desconhecido. Verifique novamente ou tente seu nome de usuário.')
     });
 
-    it.only('Deve exibir mensagem ao efetuar login com usuário inexistente', () => {
+    it('Deve exibir mensagem ao efetuar login com usuário inexistente', () => {
         cy.get('#username').type('aluno_ebac@teste.com')
         cy.get('#password').type('texto@teste.com')
         cy.get('.woocommerce-form > .button').click()
